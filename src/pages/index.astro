@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Accordion from '../components/Accordion.astro';
 
 const faqItems = [
@@ -30,14 +29,21 @@ const faqItems = [
   },
   {
     question: "¿Cómo puedo registrarme?",
-    answer: "Puedes registrarte en nuestro sitio web, completando el formulario de inscripción."
+    answer: "Puedes registrarte en el botón azul que encuetras en la parte inferior derecha de esta página. O contactarte por Whatsapp en el botón verde."
   },
-  // Agrega más preguntas y respuestas según sea necesario
 ];
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
+		<div class="floating-buttons">
+			<a href="https://forms.gle/xDuxEDrkmYccFKRp9" class="floating-button form-button" target="_blank">
+				<i class="fas fa-edit"></i>
+			</a>
+			<a href=" https://w.app/fitnessCamp" class="floating-button" target="_blank">
+				<i class="fab fa-whatsapp"></i>
+			</a>
+		</div>
 		<section>
 			<div class="hero-container">
 				<img src="/images/flame.png" alt="Trazo">
@@ -121,8 +127,16 @@ const faqItems = [
 						</div>
 						<div class="team-member-card-item">
 							<div class="company-banner tnt-banner" />
+							<h2>Nicolás Rodriguez</h>
+							<h3>CEO y Fundador de TnT Company</h3>
+							<a href="https://www.instagram.com/tandt.company/" class="container-button-insta" target="_blank">
+								<div class="floating-button-insta">
+									<i class="fab fa-instagram"></i>
+								</div>
+								@tandt.company
+							</a>
 							<p>
-								description description description description description description description description description description description description description description description description 
+								Nicolás Rodríguez es el visionario detrás de TnT Company, un centro de entrenamiento crossfit líder en Sabana Occidente. Técnico en entrenamiento deportivo y certificado en Crossfit Level 1, cuenta con más de diez años de experiencia en el acompañamiento y acondicionamiento deportivo. Ha sido participante y coordinador de importantes encuentros deportivos a nivel nacional, incluyendo TnT Games, FitLand, y House Lift, entre otros.
 							</p>
 						</div>
 					</div>
@@ -135,9 +149,17 @@ const faqItems = [
 						</div>
 						<div class="team-member-card-item">
 							<div class="company-banner mrc-banner" />
-							<p>
-								description description description description description description description description description description description description description description description description 
-							</p>
+								<h2>Juan Rodriguez y Diego Fontecha</h>
+								<h3>CEO y Cofundadores de Mosquera RC</h3>
+								<a href="https://www.instagram.com/mosquerarunningclub/" class="container-button-insta" target="_blank">
+									<div class="floating-button-insta">
+										<i class="fab fa-instagram"></i>
+									</div>
+									@mosquerarunningclub
+								</a>
+								<p>
+									Juan Camilo Rodriguez y Diego Fontecha son los líderes del primer club de atletismo en Mosquera, Mosquera Running Club. Han creado y gestionado tres eventos deportivos que han atraído a más de 800 asistentes. Con más de cinco años de experiencia como club y más de quince años en el ámbito deportivo, han establecido un legado de excelencia y dedicación en la comunidad atlética.
+								</p>
 						</div>
 					</div>
 				</div>
@@ -151,9 +173,17 @@ const faqItems = [
 						</div>
 						<div class="team-member-card-item">
 							<div class="company-banner vital-medic-banner" />
-							<p>
-								description description description description description description description description description description description description description description description description 
-							</p>
+								<h2>Daniel Angulo</h2>
+								<h3>Socio y Fundador de Vital Medic</h3>
+								<a href="https://www.instagram.com/vitalmedicmosquera/" class="container-button-insta" target="_blank">
+									<div class="floating-button-insta">
+										<i class="fab fa-instagram"></i>
+									</div>
+									@vitalmedicmosquera
+								</a>
+								<p>
+									Daniel Angulo es el fundador de Vital Medic, los primeros centros de bienestar en Mosquera que promueven la práctica de yoga y pilates. Con más de cinco años de experiencia como practicante y maestro de yoga, ha guiado a sus alumnos en diversos eventos deportivos nacionales, llevando el nombre de Mosquera con orgullo y compromiso.
+								</p>
 						</div>
 					</div>
 
@@ -164,46 +194,21 @@ const faqItems = [
 							</div>
 						</div>
 						<div class="team-member-card-item">
-							<div class="company-banner vital-medic-banner" />
-							<p>
-								description description description description description description description description description description description description description description description description 
-							</p>
-						</div>
-						
+							<div class="company-banner fitness-camp-banner" />
+								<h2>Andres Puma</h2>
+								<h3>Wellness Coach</h3>
+								<a href="https://www.instagram.com/andresspuma/" class="container-button-insta" target="_blank">
+									<div class="floating-button-insta">
+										<i class="fab fa-instagram"></i>
+									</div>
+									@andresspuma
+								</a>
+								<p>
+									Andres Puma es un instructor deportivo con más de diez años de experiencia en el acompañamiento y acondicionamiento físico. Su expertise abarca disciplinas como natación, gimnasia y crossfit. Como wellness coach, Andres se dedica a inspirar y guiar a sus clientes hacia una vida más saludable y activa.
+								</p>
+							</div>
 					</div>
 				</div>
-
-				<div class="couple-team-container">
-					<div class="team-member-card">
-						<div class="team-member-card-item">
-							<div class="image-container">
-								<img src="/images/team/samy.png" alt="Persona en Fitness Camp" class="styled-image" />
-							</div>
-						</div>
-						<div class="team-member-card-item">
-							<div class="company-banner vital-medic-banner" />
-							<p>
-								description description description description description description description description description description description description description description description description 
-							</p>
-						</div>
-					</div>
-
-					<div class="team-member-card">
-						<div class="team-member-card-item">
-							<div class="image-container">
-								<img src="/images/team/danig.png" alt="Persona en Fitness Camp" class="styled-image" />
-							</div>
-						</div>
-						<div class="team-member-card-item">
-							<div class="company-banner vital-medic-banner" />
-							<p>
-								description description description description description description description description description description description description description description description description 
-							</p>
-						</div>
-						
-					</div>
-				</div>
-
 			</div>
 			<div class="bg-black-aux"></div>
 		</section>
@@ -233,32 +238,8 @@ const faqItems = [
 		console.log('infoContainer', infoContainer)
     setTimeout(() => {
       infoContainer?.classList.add('visible');
-			// smoothScrollTo(100, 2000);
     }, 1000);
   });
-
-	// function smoothScrollTo(targetPosition, duration) {
-  //   const startPosition = window.pageYOffset;
-  //   const distance = targetPosition - startPosition;
-  //   let startTime = null;
-
-  //   function animation(currentTime) {
-  //     if (startTime === null) startTime = currentTime;
-  //     const timeElapsed = currentTime - startTime;
-  //     const run = ease(timeElapsed, startPosition, distance, duration);
-  //     window.scrollTo(0, run);
-  //     if (timeElapsed < duration) requestAnimationFrame(animation);
-  //   }
-
-  //   function ease(t, b, c, d) {
-  //     t /= d / 2;
-  //     if (t < 1) return c / 2 * t * t + b;
-  //     t--;
-  //     return -c / 2 * (t * (t - 2) - 1) + b;
-  //   }
-
-  //   requestAnimationFrame(animation);
-  // }
 	</script>
 </Layout>
 
@@ -274,14 +255,13 @@ const faqItems = [
 
 	.small-text {
 		font-family: 'Caveat', cursive;
-  	color: #white;
+  	color: white;
   	font-size: 120px;
 		font-weight: 100;
-		text-shadow: 3px 3px 0 #39B54A, /* Desplazamiento del borde */
+		text-shadow: 3px 3px 0 #39B54A,
                -3px -3px 0 #39B54A, 
                3px -3px 0 #39B54A,
                -3px 3px 0 #39B54A;
-		/* transform: rotate(-15deg);  */
 }
 
 #faq {
@@ -357,14 +337,12 @@ const faqItems = [
 		box-shadow: 0px 0px 32px 4px rgba(255,240,209,1);
 		border-radius: 20px;
 		padding: 2rem;
-		/* clip-path: polygon(0% 0%, 100% 0%, 50% 100%, 50% 100%); */
 	}
 	.information-container.visible {
 		opacity: 0.9;
   }
 
 	.company-banner {
-		/* position: relative; */
 		margin: 0;
 		padding: 0;
 		height: 5rem;
@@ -387,22 +365,10 @@ const faqItems = [
 		background-image: url('public/images/vitalMedic.png');
 		background-color: #00a4e1;
 	}
-
-	/* .company-banner::before {
-		content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-attachment: fixed;
-    background-image: url('/images/tandt.webp');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.5;
-    z-index: -1;
-	} */
-
+	.fitness-camp-banner {
+		background-image: url('public/images/fitCamp.png');
+		background-color: white;
+	}
 	.astro-a {
 		position: absolute;
 		top: -32px;
@@ -481,7 +447,6 @@ const faqItems = [
 		z-index: 1;
 	}
 	.bg-orange {
-		/* height: 800px; */
 		width: 100%;
 		background-color: #E94E1B;
 		z-index: 1;
@@ -572,7 +537,7 @@ const faqItems = [
 	}
 
 	.section-title-container {
-		max-width: 20rem;
+		max-width: 25rem;
 		background-color: black;
 		border: solid 0.2rem #39B54A;
 		width: auto;
@@ -612,7 +577,6 @@ const faqItems = [
 		flex-direction: row;
 		align-items: start;
 		margin: 1rem 0;
-		/* justify-content: center; */
 	}
 	.li-activities  span {
 		padding: 0 1rem ;
@@ -620,7 +584,6 @@ const faqItems = [
 	}
 	.day-title {
 		background-color: transparent;
-		/* height: 20rem; */
 	}
 	.day-title h3 {
 		margin: 0;
@@ -649,6 +612,7 @@ const faqItems = [
 		display: flex;
 		flex-direction: row;
 		width: 50%;
+		padding-top: 3rem;
 	}
 	.team-member-card-item {
 		width: 50%;
@@ -656,6 +620,15 @@ const faqItems = [
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+	}
+
+	.team-member-card-item h2 {
+		margin: 2rem 0 0 0;
+		padding: 0;
+	}
+	.team-member-card-item h3 {
+		margin: 0 0 2rem 0;
+		padding: 0;
 	}
 	.second-team-member-card-item img,
 	.team-member-card-item img {
@@ -677,6 +650,62 @@ const faqItems = [
 		mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 	}
 
+	.floating-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px; /* Space between buttons */
+      z-index: 1000;
+    }
+
+    .floating-button {
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
+    }
+
+		.floating-button-insta {
+      background-color: #E1306C;
+      color: white;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
+			margin-right: 0.5rem;
+    }
+
+		.container-button-insta {
+			text-decoration: none;
+			display: flex;
+			flex-direction: row;
+			color: white;
+			padding-bottom: 0.5rem;
+			border-bottom: 2px solid #E94E1B;
+		}
+
+    .form-button {
+      background-color: #007bff;
+      border-radius: 50%;
+    }
+
+    .floating-button i {
+      font-size: 30px;
+    }
+
 	@media (max-width: 1024px) {
     main {
       width: 130%;
@@ -686,7 +715,7 @@ const faqItems = [
 			background-attachment: fixed;
     }
 		.hero-container h1 {
-			font-size: 5rem;
+			font-size: 4rem;
 		}
 		.bg-transparent {
 			font-size: 1.5rem;
@@ -733,9 +762,12 @@ const faqItems = [
 		.team-member-card {
 			flex-direction: column;
 			width: 100%;
+			border-bottom: 1px solid #39B54A;
+			padding-top: 0;
 		}
 		.team-member-card-item {
 			width: 100%;
 		}
+		
   }
 </style>
