@@ -1,0 +1,86 @@
+---
+// src/components/Accordion.astro
+interface AccordionItem {
+  question: string;
+  answer: string;
+}
+
+export interface Props {
+  items: AccordionItem[];
+}
+
+const { items } = Astro.props;
+const idPrefix = Math.random().toString(36).substr(2, 9);
+---
+
+<style>
+  .accordion {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 20px;
+  }
+
+  .accordion-item {
+    background: black;
+    border-bottom: 1px solid #E94E1B;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 20px;
+
+  }
+
+  .accordion-question {
+    margin: 0;
+  }
+
+  .accordion-answer {
+    padding: 15px 20px 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    font-size: 14px;
+    font-weight: 100;
+    opacity: 0;
+  }
+
+  .accordion-item.active .accordion-answer {
+    max-height: 500px; /* Ajusta este valor según sea necesario */
+    opacity: 1;
+  }
+
+  @media (max-width: 1024px) {
+    .accordion-question {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .accordion-answer {
+    font-size: 1.5rem;
+  }
+  }
+</style>
+
+
+<div class="accordion">
+  {items.map((item, index) => (
+    <div class="accordion-item" id={`${idPrefix}-item-${index}`} onClick={() => toggleAnswer(index)}>
+      <div class="accordion-question">{item.question}</div>
+      <div class="accordion-answer">{item.answer}</div>
+    </div>
+  ))}
+</div>
+
+<script>
+  function toggleAnswer(index) {
+    const item = document.getElementById(`${idPrefix}-item-${index}`);
+    item && item.classList.toggle('active');
+  }
+</script>
+
+<script client:load>
+  document.querySelectorAll('.accordion-item').forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  });
+</script>
