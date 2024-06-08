@@ -1,5 +1,4 @@
 ---
-// src/components/Accordion.astro
 interface AccordionItem {
   question: string;
   answer: string;
@@ -27,7 +26,6 @@ const idPrefix = Math.random().toString(36).substr(2, 9);
     padding: 1rem;
     cursor: pointer;
     border-radius: 20px;
-
   }
 
   .accordion-question {
@@ -51,19 +49,18 @@ const idPrefix = Math.random().toString(36).substr(2, 9);
 
   @media (max-width: 1024px) {
     .accordion-question {
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-  .accordion-answer {
-    font-size: 1.5rem;
-  }
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .accordion-answer {
+      font-size: 1.5rem;
+    }
   }
 </style>
 
-
 <div class="accordion">
   {items.map((item, index) => (
-    <div class="accordion-item" id={`${idPrefix}-item-${index}`} onClick={() => toggleAnswer(index)}>
+    <div class="accordion-item" id={`${idPrefix}-item-${index}`}>
       <div class="accordion-question">{item.question}</div>
       <div class="accordion-answer">{item.answer}</div>
     </div>
@@ -71,16 +68,11 @@ const idPrefix = Math.random().toString(36).substr(2, 9);
 </div>
 
 <script>
-  function toggleAnswer(index) {
-    const item = document.getElementById(`${idPrefix}-item-${index}`);
-    item && item.classList.toggle('active');
-  }
-</script>
-
-<script client:load>
-  document.querySelectorAll('.accordion-item').forEach(item => {
-    item.addEventListener('click', () => {
-      item.classList.toggle('active');
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.accordion-item').forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
     });
   });
 </script>
